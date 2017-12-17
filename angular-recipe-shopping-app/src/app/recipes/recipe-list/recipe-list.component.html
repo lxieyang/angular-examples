@@ -4,10 +4,12 @@
   </div>
 </div>
 <hr>
-<div class="row">
+<div 
+  class="row" 
+  *ngFor="let recipeEl of recipes; let i = index"
+  style="margin-top: 8px;">
   <div class="col-xs-12">
     <app-recipe-item  
-      *ngFor="let recipeEl of recipes; let i = index"
       [recipe]="recipeEl"
       [index]="i"
     >
