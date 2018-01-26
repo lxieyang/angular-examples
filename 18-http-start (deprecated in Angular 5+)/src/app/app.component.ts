@@ -1,6 +1,6 @@
+import { Response } from '@angular/http';
 import { Component } from '@angular/core';
 import { ServerService } from './server.service';
-import { Response } from '@angular/http';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +8,9 @@ import { Response } from '@angular/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  appName = this.serverService.getAppName();  // use async pipe
 
+  appName: string = this.serverService.getAppName();
+  
   servers = [
     {
       name: 'Testserver',
@@ -59,4 +60,5 @@ export class AppComponent {
       console.log(error);
     });
   }
+
 }
