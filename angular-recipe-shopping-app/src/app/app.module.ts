@@ -20,6 +20,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 
 import { RecipeService } from './recipes/recipe.service';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { DataStorageService } from './shared/data-storage.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [ShoppingListService, RecipeService],
+  providers: [ShoppingListService, RecipeService, DataStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
